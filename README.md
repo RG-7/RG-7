@@ -17,7 +17,7 @@
 
 # 💻 Tech Stack:
 <p align="center">
-  <img src="https://img.icons8.com/?size=256&id=9MJf0ngDwS8z&format=png" alt="Firebase" height="20" width="10">
+  <img src="https://img.icons8.com/?size=256&id=9MJf0ngDwS8z&format=png" alt="Firebase" height="30" width="30">
   <img src="URL_TO_BADGE_2" alt="Badge 2">
 </p>
 
