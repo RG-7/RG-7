@@ -17,7 +17,8 @@
 
 # 💻 Tech Stack:
 <p align="center">
-  <!-- Your tech stack badges here -->
+  <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Badge 1">
+  <img src="URL_TO_BADGE_2" alt="Badge 2">
 </p>
 
 # 📊 GitHub Stats:
