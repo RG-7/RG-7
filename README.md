@@ -17,8 +17,15 @@
 
 # 💻 Tech Stack:
 <p align="center">
-  <img src="https://img.icons8.com/?size=256&id=9MJf0ngDwS8z&format=png" alt="Firebase" height="30" width="30">
-  <img src="URL_TO_BADGE_2" alt="Badge 2">
+  <img src="https://img.icons8.com/?size=256&id=7I3BjCqe9rjG&format=png" alt="Flutter" height="30" width="30">
+  <img src="https://img.icons8.com/?size=256&id=40669&format=png" alt="C++" height="30" width="30">
+  <img src="https://img.icons8.com/?size=256&id=13679&format=png" alt="Java" height="30" width="30">
+  <img src="https://img.icons8.com/?size=256&id=13441&format=png" alt="Python" height="30" width="30">
+  <img src="https://img.icons8.com/?size=256&id=7AFcZ2zirX6Y&format=png" alt="Dart" height="30" width="30">
+  <img src="https://img.icons8.com/?size=256&id=qGUfLiYi1bRN&format=png" alt="SQL" height="30" width="30">
+  <img src="https://img.icons8.com/?size=256&id=87330&format=png" alt="Firebase" height="30" width="30">
+  <img src="https://img.icons8.com/?size=48&id=20909&format=png" alt="HTML" height="30" width="30">
+  <img src="https://img.icons8.com/?size=256&id=9MJf0ngDwS8z&format=png" alt="Bash" height="30" width="30">
 </p>
 
 # 📊 GitHub Stats:
