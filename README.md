@@ -17,7 +17,7 @@
 
 # 💻 Tech Stack:
 <p align="center">
-  <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Badge 1">
+  <img src="https://drive.google.com/file/d/1k08ZTD4OBgazXahK0HdqLtUWM_yq0_5a/view?usp=sharing" alt="Firebase">
   <img src="URL_TO_BADGE_2" alt="Badge 2">
 </p>
 
