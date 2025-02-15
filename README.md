@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on CyberSecurity<br>🌱 I’m currently learning Python<br>💬 Ask me about Programming
+🔭 I’m currently Learning Go<br>🌱💬
 
 
 ## 🌐 Socials:
