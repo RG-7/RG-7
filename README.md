@@ -14,6 +14,7 @@
 
 # 💻 Tech Stack:
 <p align="center">
+  <img src="https://img.icons8.com/?size=96&id=44442&format=png" alt="Go" height="30" width="30">
   <img src="https://img.icons8.com/?size=256&id=7I3BjCqe9rjG&format=png" alt="Flutter" height="30" width="30">
   <img src="https://img.icons8.com/?size=256&id=40669&format=png" alt="C++" height="30" width="30">
   <img src="https://img.icons8.com/?size=256&id=13679&format=png" alt="Java" height="30" width="30">
