@@ -1,12 +1,9 @@
 # 💫 About Me:
-🔭 I’m currently Learning Go<br>🌱💬
+🔭 I’m currently Learning Go🌱💬<br>
 
 
 ## 🌐 Socials:
 <p align="center">
-  <a href="https://instagram.com/i_m_ratn">
-    <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white" alt="Instagram">
-  </a>
   <a href="https://linkedin.com/in/ratn">
     <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
