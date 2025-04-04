@@ -48,7 +48,7 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Image.asset(
-                    "assets/image/ratn.png",
+                    "assets/images/ratn.png",
                     width: w / 2,
                     height: h * 0.8,
                   ),
