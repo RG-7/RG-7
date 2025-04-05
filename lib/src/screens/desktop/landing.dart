@@ -34,21 +34,21 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
                 about(w, h, context),
               ],
             ),
-
+                  
             SizedBox(height: h * 0.15),
-
+                  
             // Experience
             DesktopExperienceScreen(),
             SizedBox(height: h * 0.3),
-
+                  
             // Works
             DesktopWorksScreen(),
             SizedBox(height: h * 0.15),
-
+                  
             // Talks
-
+                  
             // Skills
-
+                  
             // footer
           ],
         ),

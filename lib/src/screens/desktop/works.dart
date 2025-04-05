@@ -12,6 +12,7 @@ class DesktopWorksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final h = MediaQuery.of(context).size.height;
+    double maxExtent = MediaQuery.of(context).size.width > 1200 ? 400 : 300;
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 100, vertical: 50),
       decoration: BoxDecoration(
@@ -67,20 +68,27 @@ class DesktopWorksScreen extends StatelessWidget {
             ],
           ),
 
-          // frid
-          GridView.builder(
-            itemCount: projects.length,
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            padding: const EdgeInsets.all(20),
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 350,
-              mainAxisSpacing: 20,
-              crossAxisSpacing: 20,
-              childAspectRatio: 0.75,
+          SizedBox(height: h * 0.1),
+
+          // grid
+          Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 1200),
+              child: GridView.builder(
+                itemCount: projects.length,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                padding: const EdgeInsets.all(20),
+                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: maxExtent,
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 20,
+                  childAspectRatio: 0.75,
+                ),
+                itemBuilder: (context, index) =>
+                    ProjectCard(project: projects[index]),
+              ),
             ),
-            itemBuilder: (context, index) =>
-                ProjectCard(project: projects[index]),
           ),
 
           SizedBox(
@@ -108,14 +116,6 @@ final List<Project> projects = [
     imagePath: "assets/images/hospital.jpg",
     githubUrl: "https://github.com/ratn/hospital-app",
     websiteUrl: "https://hospital.ratn.in",
-  ),
-  Project(
-    title: "Cyber Security Dashboard",
-    description:
-        "Dashboard for analyzing vulnerabilities and managing threat reports using Flutter & Firebase.",
-    imagePath: "assets/images/cyber.jpg",
-    githubUrl: "https://github.com/ratn/cyber-dashboard",
-    websiteUrl: "https://cyber.defronix.in",
   ),
   Project(
     title: "Portfolio Website",
