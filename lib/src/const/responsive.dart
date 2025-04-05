@@ -24,3 +24,10 @@ class ResponsiveLayout extends StatelessWidget {
     }
   }
 }
+
+class ResponsiveFunction {
+  static double getResponsiveFontSize(BuildContext context, double baseSize) {
+    final width = MediaQuery.of(context).size.width;
+    return baseSize * (width / 1440); // base is 1440px screen
+  }
+}

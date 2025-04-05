@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '/src/const/const.dart';
+import '/src/const/responsive.dart';
+import '/src/screens/desktop/experience.dart';
 import '/src/const/colors.dart';
 
 class DesktopLandingScreen extends StatefulWidget {
@@ -17,12 +18,6 @@ class DesktopLandingScreen extends StatefulWidget {
 class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
   int _index = 0;
 
-  // ✅ Font size scaler
-  double getResponsiveFontSize(BuildContext context, double baseSize) {
-    final width = MediaQuery.of(context).size.width;
-    return baseSize * (width / 1440); // base is 1440px screen
-  }
-
   @override
   Widget build(BuildContext context) {
     final h = MediaQuery.of(context).size.height;
@@ -30,92 +25,120 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
 
     return Scaffold(
       backgroundColor: AppColors.backgroundWhiteCream,
-      body: Stack(
-        children: [
-          topNavigationBar(h, w),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Stack(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            // services
+            Column(
               children: [
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: SvgPicture.asset(
-                    "assets/svg/bg-green.svg",
-                    width: w / 3,
-                    height: h * 0.8,
+                topNavigationBar(h, w),
+                about(w, h, context),
+              ],
+            ),
+
+            SizedBox(height: h * 0.15),
+
+            // Experience
+            DesktopExperienceScreen()
+
+            // Works
+
+            // Labs
+
+            // Skills
+
+            // footer
+          ],
+        ),
+      ),
+    );
+  }
+
+  Padding about(double w, double h, BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      child: Stack(
+        children: [
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: SvgPicture.asset(
+              "assets/svg/bg-green.svg",
+              width: w / 3,
+              height: h * 0.8,
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Image.asset(
+              "assets/images/ratn.png",
+              width: w / 2,
+              height: h * 0.8,
+            ),
+          ),
+          Positioned(
+            left: w * 0.05,
+            top: h * 0.2,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              spacing: h * 0.07,
+              children: [
+                Text(
+                  "Hey There,\nI'm Ratn",
+                  style: GoogleFonts.albertSans(
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.navyBlue,
+                    fontSize:
+                        ResponsiveFunction.getResponsiveFontSize(context, 55),
                   ),
                 ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Image.asset(
-                    "assets/images/ratn.png",
-                    width: w / 2,
-                    height: h * 0.8,
+                SizedBox(height: h * 0.02),
+                Text(
+                  "rg.ratn@gmail.com",
+                  textAlign: TextAlign.start,
+                  style: GoogleFonts.albertSans(
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.orange,
+                    fontSize:
+                        ResponsiveFunction.getResponsiveFontSize(context, 25),
                   ),
                 ),
-                Positioned(
-                  left: w * 0.05,
-                  top: h * 0.2,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    spacing: h * 0.07,
-                    children: [
-                      Text(
-                        "Hey There,\nI'm Ratn",
-                        style: GoogleFonts.albertSans(
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.navyBlue,
-                          fontSize: getResponsiveFontSize(context, 55),
-                        ),
+                SizedBox(height: h * 0.02),
+                Row(
+                  children: [
+                    Text(
+                      "1.5",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.navyBlue,
+                        fontSize: ResponsiveFunction.getResponsiveFontSize(
+                            context, 50),
                       ),
-                      SizedBox(height: h * 0.02),
-                      Text(
-                        "rg.ratn@gmail.com",
-                        textAlign: TextAlign.start,
-                        style: GoogleFonts.albertSans(
-                          fontWeight: FontWeight.w500,
-                          color: AppColors.orange,
-                          fontSize: getResponsiveFontSize(context, 25),
-                        ),
-                      ),
-                      SizedBox(height: h * 0.02),
-                      Row(
-                        children: [
-                          Text(
-                            "1.5",
-                            style: GoogleFonts.montserrat(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.navyBlue,
-                              fontSize: getResponsiveFontSize(context, 50),
-                            ),
-                          ),
-                          const SizedBox(width: 5),
-                          Text(
-                            "YEARS\nEXPERIENCE",
-                            style: GoogleFonts.montserrat(
-                              fontWeight: FontWeight.normal,
-                              color: AppColors.navyBlue,
-                              fontSize: getResponsiveFontSize(context, 15),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Positioned(
-                  right: w * 0.1,
-                  top: h * 0.35,
-                  child: Text(
-                    "I develop simple things,\nand I love what I do. ",
-                    style: GoogleFonts.aBeeZee(
-                      fontWeight: FontWeight.w100,
-                      color: AppColors.navyBlue,
-                      fontSize: getResponsiveFontSize(context, 25),
                     ),
-                  ),
+                    const SizedBox(width: 5),
+                    Text(
+                      "YEARS\nEXPERIENCE",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.normal,
+                        color: AppColors.navyBlue,
+                        fontSize: ResponsiveFunction.getResponsiveFontSize(
+                            context, 15),
+                      ),
+                    ),
+                  ],
                 ),
               ],
+            ),
+          ),
+          Positioned(
+            right: w * 0.1,
+            top: h * 0.35,
+            child: Text(
+              "I develop simple things,\nand I love what I do. ",
+              style: GoogleFonts.aBeeZee(
+                fontWeight: FontWeight.w100,
+                color: AppColors.navyBlue,
+                fontSize: ResponsiveFunction.getResponsiveFontSize(context, 25),
+              ),
             ),
           ),
         ],
@@ -140,7 +163,8 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
                 "Ratn",
                 style: GoogleFonts.cedarvilleCursive(
                   color: AppColors.black,
-                  fontSize: getResponsiveFontSize(context, 32),
+                  fontSize:
+                      ResponsiveFunction.getResponsiveFontSize(context, 32),
                 ),
               ),
 
@@ -163,7 +187,8 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
                         "+91-9779791959",
                         style: GoogleFonts.abel(
                           color: AppColors.black,
-                          fontSize: getResponsiveFontSize(context, 18),
+                          fontSize: ResponsiveFunction.getResponsiveFontSize(
+                              context, 18),
                         ),
                       ),
                       SizedBox(width: w * 0.01),
@@ -222,7 +247,7 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
             color: selectedIndex == index
                 ? AppColors.backgroundDarkGreen
                 : AppColors.black,
-            fontSize: getResponsiveFontSize(context, 14),
+            fontSize: ResponsiveFunction.getResponsiveFontSize(context, 14),
           ),
         ),
       ),
