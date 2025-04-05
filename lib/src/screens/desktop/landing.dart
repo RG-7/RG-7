@@ -1,10 +1,9 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '/src/const/responsive.dart';
+import '/src/screens/desktop/works.dart';
 import '/src/screens/desktop/experience.dart';
 import '/src/const/colors.dart';
 
@@ -39,11 +38,14 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
             SizedBox(height: h * 0.15),
 
             // Experience
-            DesktopExperienceScreen()
+            DesktopExperienceScreen(),
+            SizedBox(height: h * 0.3),
 
             // Works
+            DesktopWorksScreen(),
+            SizedBox(height: h * 0.15),
 
-            // Labs
+            // Talks
 
             // Skills
 
@@ -63,7 +65,7 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
             alignment: Alignment.bottomCenter,
             child: SvgPicture.asset(
               "assets/svg/bg-green.svg",
-              width: w / 3,
+              width: w / 4,
               height: h * 0.8,
             ),
           ),
@@ -102,7 +104,7 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
                         ResponsiveFunction.getResponsiveFontSize(context, 25),
                   ),
                 ),
-                SizedBox(height: h * 0.02),
+                // SizedBox(height: h * 0.0001),
                 Row(
                   children: [
                     Text(
@@ -173,11 +175,11 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
                 children: [
                   navBar(index: 0, selectedIndex: _index, text: "SERVICES"),
                   SizedBox(width: w * 0.001),
+                  navBar(index: 3, selectedIndex: _index, text: "EXPERIENCE"),
+                  SizedBox(width: w * 0.001),
                   navBar(index: 1, selectedIndex: _index, text: "WORKS"),
                   SizedBox(width: w * 0.001),
-                  navBar(index: 2, selectedIndex: _index, text: "LABS"),
-                  SizedBox(width: w * 0.001),
-                  navBar(index: 3, selectedIndex: _index, text: "EXPERIENCE"),
+                  navBar(index: 2, selectedIndex: _index, text: "TALKS"),
                   SizedBox(width: w * 0.001),
                   navBar(index: 4, selectedIndex: _index, text: "SKILLS"),
                   SizedBox(width: w * 0.1),
@@ -193,11 +195,12 @@ class _DesktopLandingScreenState extends State<DesktopLandingScreen> {
                       ),
                       SizedBox(width: w * 0.01),
                       CircleAvatar(
-                        radius: 20,
+                        radius: w * 0.01,
                         backgroundColor: AppColors.white,
                         child: Icon(
                           Icons.phone_callback_outlined,
                           color: Colors.green,
+                          size: w * 0.0125,
                         ),
                       ),
                     ],
